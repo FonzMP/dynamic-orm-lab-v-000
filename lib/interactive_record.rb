@@ -50,7 +50,7 @@ class InteractiveRecord
   end
 
   def self.find_by(option)
-
+    sql = "SELECT * FROM #{self.table_name} WHERE #{col_names_for_insert} = ?"
   end
 
 end
