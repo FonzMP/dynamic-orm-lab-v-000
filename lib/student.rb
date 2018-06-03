@@ -6,5 +6,6 @@ class Student < InteractiveRecord
 
   def initialize(option={})
 
+  end
 
 end
