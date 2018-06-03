@@ -50,11 +50,7 @@ class InteractiveRecord
   end
 
   def self.find_by(option)
-    option.each do |key, value|
-      puts key
-      puts value
-    end
-    sql = "SELECT * FROM #{self.table_name} WHERE #{col_names_for_insert} = ?"
+    sql = "SELECT * FROM #{self.table_name} WHERE #{option.key} = ?"
     DB[:conn].execute(sql, option)
   end
 
