@@ -5,7 +5,7 @@ require 'interactive_record.rb'
 class Student < InteractiveRecord
 
   def initialize(options={})
-
+    options.each do |key, value|
   end
 
   self.column_names.each do |col_name|
