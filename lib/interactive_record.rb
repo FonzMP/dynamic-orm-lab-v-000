@@ -23,4 +23,6 @@ class InteractiveRecord
 
   self.column_names.each do |col_name|
 
+  end
+
 end
