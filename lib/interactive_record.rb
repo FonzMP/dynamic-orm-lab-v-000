@@ -50,7 +50,7 @@ class InteractiveRecord
   end
 
   def self.find_by(option)
-    options.each do |key, value|
+    option.each do |key, value|
       puts key
       puts value
     end
