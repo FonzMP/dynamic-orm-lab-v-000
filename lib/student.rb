@@ -6,6 +6,8 @@ class Student < InteractiveRecord
 
   def initialize(options={})
     options.each do |key, value|
+      self.send("#{key}=", value)
+    end
   end
 
   self.column_names.each do |col_name|
