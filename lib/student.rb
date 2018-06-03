@@ -5,7 +5,7 @@ require 'interactive_record.rb'
 class Student < InteractiveRecord
 
   def initialize(option={})
-
+    options.each do |property, value|
   end
 
 end
