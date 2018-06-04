@@ -55,7 +55,7 @@ class InteractiveRecord
       @option_key = key
       @option_value = value
     end
-    # binding.pry
+    binding.pry
     sql = "SELECT * FROM #{self.table_name} WHERE #{@option_key.to_s} = #{@option_value}"
     DB[:conn].execute(sql)
   end
