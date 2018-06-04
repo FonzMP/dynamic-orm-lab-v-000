@@ -55,7 +55,7 @@ class InteractiveRecord
       @option_key = key.to_sym
       @option_value = value
     end
-    sql = "SELECT * FROM #{self.table_name} WHERE ? = ?"
+    sql = "SELECT * FROM #{self.table_name} WHERE #{@option_key} = @option_value"
     DB[:conn].execute(sql, option)
   end
 
