@@ -52,7 +52,7 @@ class InteractiveRecord
 
   def self.find_by(option)
     option.each do |key, value|
-      @option_key = key.to_sym
+      @option_key = key
       @option_value = value
     end
     sql = "SELECT * FROM #{self.table_name} WHERE #{@option_key} = #{@option_value}"
