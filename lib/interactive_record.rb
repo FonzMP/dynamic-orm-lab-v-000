@@ -53,7 +53,6 @@ class InteractiveRecord
   def self.find_by(option)
     option.each do |key, value|
       @option_key = key
-      @option_key.to_s
       @option_value = value
     end
     sql = "SELECT * FROM #{self.table_name} WHERE ? = ?"
